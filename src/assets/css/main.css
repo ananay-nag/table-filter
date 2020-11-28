@@ -1,0 +1,186 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  display: flex;
+  height: 100%;
+  line-height: 1.6;
+  margin: auto;
+  background-image: linear-gradient(
+      135deg,
+      rgba(147, 12, 38, 0.3) 0%,
+      rgba(147, 12, 38, 0.3) 20%,
+      rgba(166, 30, 40, 0.3) 20%,
+      rgba(166, 30, 40, 0.3) 40%,
+      rgba(185, 47, 43, 0.3) 40%,
+      rgba(185, 47, 43, 0.3) 60%,
+      rgba(204, 65, 45, 0.3) 60%,
+      rgba(204, 65, 45, 0.3) 80%,
+      rgba(223, 82, 47, 0.3) 80%,
+      rgba(223, 82, 47, 0.3) 100%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(249, 127, 173, 0.3) 0%,
+      rgba(249, 127, 173, 0.3) 20%,
+      rgba(212, 102, 156, 0.3) 20%,
+      rgba(212, 102, 156, 0.3) 40%,
+      rgba(176, 76, 139, 0.3) 40%,
+      rgba(176, 76, 139, 0.3) 60%,
+      rgba(139, 51, 122, 0.3) 60%,
+      rgba(139, 51, 122, 0.3) 80%,
+      rgba(102, 25, 105, 0.3) 80%,
+      rgba(102, 25, 105, 0.3) 100%
+    ),
+    linear-gradient(90deg, rgb(30, 19, 209), rgb(206, 201, 28));
+}
+.width-500 {
+  width: 500px;
+}
+.height-400 {
+  width: 400px;
+}
+.flip-card {
+  background-color: transparent;
+  /* perspective: 1000px; */
+  perspective-origin: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.flip-card-inner-rotateY {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Style the header */
+.product-header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+}
+
+/* Clear floats after the header */
+.product-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn {
+  float: left;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.add-btn {
+  padding: 7px 15px;
+  background: #d9d9d9;
+}
+.add-task-btn {
+  padding: 7px 15px;
+  background: #fff;
+}
+.btn:hover {
+  background-color: #bbb;
+}
+.task-input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 82%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  outline: none;
+}
+.br-bottom-2-fff {
+  border-bottom: solid 2px #fff;
+}
+.br-top-2-fff {
+  border-top: solid 2px #fff;
+}
+.truncate-text {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.login-model {
+  min-width: 200px;
+  width: 50%;
+  max-width: 50%;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0px 0px 10px #fffdff;
+}
+.login-com {
+  min-width: 200px;
+  width: 50%;
+  max-width: 50%;
+}
+.MuiFormControl-root {
+  margin: 10px !important;
+}
+.fl-detail-box {
+  max-width: 200px;
+  min-width: 150px;
+  /* height: 50px; */
+  /* background: rgba(255, 255, 255, 0.4); */
+  margin: 10px;
+}
+.fl-detail-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(105, 104, 105);
+  margin: 5px;
+}
+.fl-detail-value {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(21, 22, 24);
+  margin: 5px;
+}
+
+.tab-filter-sec {
+  min-height: min-content;
+  max-height: 25%;
+  overflow: auto;
+}
+.tab-data {
+  min-height: 50%;
+  max-height: 80%;
+  overflow: auto;
+}
+.filter-form-control {
+  width: 100%;
+  height: 35px;
+  font-size: 18px;
+  text-indent: 10px;
+}
